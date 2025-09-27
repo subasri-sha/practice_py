@@ -1,7 +1,9 @@
 num = 4
 
 if num %2 ==0:
-    print("Even number")
+    print(f"The given number {num} is even")
 
 else:
-    print("Odd Number")
+    print(f"The given number {num} is odd")
+    
+ 
