@@ -3,10 +3,10 @@ import sys
 
 def type_print(text, delay=0.05):
     """Prints text character by character with a delay."""
-    for char in text:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(delay)
+    for char in text: # loops through each character in the string.
+        sys.stdout.write(char) # prints the character without a newline.
+        sys.stdout.flush() # ensures the character is printed immediately.
+        time.sleep(delay) # waits for the specified delay.
     print()  # move to next line after finishing
 
 
