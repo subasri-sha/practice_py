@@ -81,11 +81,10 @@ game_over = False
 correct_letters = [ ]
 
 while not game_over: # Use a while loop to allow the user to keep guessing until they find all the letters in the chosen_word.w
-    print("***************************************<???> / 6 LIVES LEFT ***************************************")
     guess = input("Guess a letter: ").lower()
 
 
-    display = " "  # Create a display string which contains the letters and underscores
+    display = ""  # Create a display string which contains the letters and underscores
    
     for letter in chosen_word: 
         if letter == guess:
@@ -99,7 +98,9 @@ while not game_over: # Use a while loop to allow the user to keep guessing until
     print(display)
 
     if guess not in chosen_word:
-        lives -=1
+        lives -= 1
+        print(HANGMANPICS[6 - lives])
+
         if lives == 0:
             game_over = True
             print("*************************************** YOU LOSE ***************************************")
@@ -108,5 +109,6 @@ while not game_over: # Use a while loop to allow the user to keep guessing until
         game_over = True
         print("*************************************** YOU WON ***************************************")
 
-    print(HANGMANPICS[lives])
+    # print(HANGMANPICS[lives]) # Print the corresponding hangman stage based on the number of lives leftf
+
 
